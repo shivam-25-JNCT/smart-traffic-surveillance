@@ -1,0 +1,21 @@
+# Python System Caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.env
+
+# AI Weights and Model Checkpoints (Big Files Excluded)
+backend/app/weights/*.pt
+.paddlex/
+.easyocr/
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Storage Evidence
+evidence/

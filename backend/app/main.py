@@ -1,15 +1,15 @@
 from fastapi import FastAPI
-from app.api.routes import router
-app=FastAPI(
-    title="Smart Trafic Survelliance System",
-    description="Backend APIs for ANPR System",
-    version="1.0.0"
+from fastapi.middleware.cors import CORSMiddleware
+from app.api.routes import router as api_router
+
+app = FastAPI(title="AegisVision Centralized AI Core Engine Gateway Router")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:8501"],
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
-app.include_router(router)
-
-@app.get("/")
-def home():
-    return {
-        "message": "Smart Traffic Surveillance System API is running"
-    }
+# Active endpoints router connection sequence
+app.include_router(api_router)
