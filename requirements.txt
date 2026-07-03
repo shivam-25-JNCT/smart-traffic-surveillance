@@ -1,0 +1,8 @@
+numpy
+filterpy
+lap
+scipy
+opencv-python
+requests
+ultralytics
+paddleocr
