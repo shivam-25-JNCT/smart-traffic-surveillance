@@ -37,7 +37,7 @@ from plate_rules import validate_or_correct
 # ============================================================
 # CONFIG
 # ============================================================
-SOURCE = "rtsp://admin:admin@192.168.10.19:554/ch0_0.264"   # FILE demo (safe). For live: paste the RTSP URL here.
+SOURCE = "videos/bike1.mp4"   # FILE demo (safe). For live: paste the RTSP URL here.
 PLATE_MODEL = "model/best.pt"
 PLATE_CONF = 0.35
 OCR_MIN_CONF = 0.45
